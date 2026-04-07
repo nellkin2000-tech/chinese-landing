@@ -89,12 +89,24 @@
             <span class="hero__tag">Микролернинг</span>
           </div>
         </div>
-        <div class="hero__characters">
-          <div class="hero__character hero__character--ezhenya">
-            <img src="./assets/ezhenya.jpg" alt="Ежэня - персонаж-маскот тренажера" width="220" height="300" loading="eager">
+        <div class="hero__cards">
+          <div class="hero-char-card">
+            <div class="hero-char-card__img">
+              <img src="./assets/arkadiy.jpg" alt="Аркадий" width="160" height="200" loading="eager">
+            </div>
+            <div class="hero-char-card__info">
+              <h3 class="hero-char-card__name">Аркадий</h3>
+              <p class="hero-char-card__role">Криптозоолог,<br>главный герой</p>
+            </div>
           </div>
-          <div class="hero__character hero__character--arkadiy">
-            <img src="./assets/arkadiy.jpg" alt="Аркадий - главный герой-криптозоолог" width="160" height="260" loading="eager">
+          <div class="hero-char-card">
+            <div class="hero-char-card__img">
+              <img src="./assets/ezhenya.jpg" alt="Ежэня" width="160" height="200" loading="eager">
+            </div>
+            <div class="hero-char-card__info">
+              <h3 class="hero-char-card__name">Ежэня</h3>
+              <p class="hero-char-card__role">Мистический персонаж,<br>маскот тренажера</p>
+            </div>
           </div>
         </div>
       </div>
@@ -258,41 +270,14 @@
         <span class="section__label reveal">Стейкхолдеры</span>
         <h2 class="section__title reveal">Карта стейкхолдеров</h2>
         <p class="section__desc reveal">Распределение заинтересованных сторон по уровню влияния и поддержки проекта.</p>
-        <div class="stakeholders__content reveal-stagger">
-          <div class="stakeholder-quadrant stakeholder-quadrant--champions">
-            <h3 class="stakeholder-quadrant__title">Чемпионы (высокое влияние + поддержка)</h3>
-            <ul class="stakeholder-quadrant__list">
-              <li>ШИЯ ВШЭ</li>
-              <li>ФМЭиМП ВШЭ</li>
-              <li>Департамент иностранных языков</li>
-              <li>Школа востоковедения</li>
-            </ul>
-          </div>
-          <div class="stakeholder-quadrant stakeholder-quadrant--critics">
-            <h3 class="stakeholder-quadrant__title">Критики (высокое влияние, низкая поддержка)</h3>
-            <ul class="stakeholder-quadrant__list">
-              <li>ЦФИ НИУ ВШЭ</li>
-              <li>Академическое сообщество</li>
-            </ul>
-          </div>
-          <div class="stakeholder-quadrant stakeholder-quadrant--supporters">
-            <h3 class="stakeholder-quadrant__title">Сторонники (высокая поддержка)</h3>
-            <ul class="stakeholder-quadrant__list">
-              <li>Студенты</li>
-              <li>Преподаватели китайского языка</li>
-              <li>Центр подготовки ФГН</li>
-              <li>ИКВИА</li>
-              <li>Слушатели ДПО</li>
-              <li>ИДПО (СПб)</li>
-            </ul>
-          </div>
-          <div class="stakeholder-quadrant stakeholder-quadrant--passive">
-            <h3 class="stakeholder-quadrant__title">Пассивные</h3>
-            <ul class="stakeholder-quadrant__list">
-              <li>Частные школы</li>
-              <li>Репетиторы</li>
-            </ul>
-          </div>
+        <div class="stakeholder-map reveal" id="stakeholder-map">
+          <canvas id="stakeholder-canvas"></canvas>
+        </div>
+        <div class="stakeholder-legend reveal">
+          <div class="stakeholder-legend__item"><span class="stakeholder-legend__dot" style="background:#2a7d3f"></span> Чемпионы</div>
+          <div class="stakeholder-legend__item"><span class="stakeholder-legend__dot" style="background:#c45a3c"></span> Критики</div>
+          <div class="stakeholder-legend__item"><span class="stakeholder-legend__dot" style="background:#3068a8"></span> Сторонники</div>
+          <div class="stakeholder-legend__item"><span class="stakeholder-legend__dot" style="background:#999"></span> Пассивные</div>
         </div>
       </div>
     </section>
@@ -304,42 +289,75 @@
         <h2 class="section__title reveal">Научная база продукта</h2>
         <p class="section__desc reveal">Проектные решения опираются на теории обучения и модели педагогического дизайна.</p>
 
-        <div class="theory__grid reveal-stagger">
-          <div class="theory-card">
-            <span class="theory-card__category">Теория обучения</span>
-            <h3 class="theory-card__title">Конструктивизм</h3>
-            <p class="theory-card__desc">Основа подхода: ученик выстраивает знание через активное взаимодействие со средой, контекстное погружение и решение реальных коммуникативных задач.</p>
+        <!-- Three-column flow: Theories -> PedDesign theories -> Models -->
+        <div class="theory-flow reveal">
+
+          <!-- Column 1: Big learning theories -->
+          <div class="theory-flow__col theory-flow__col--left">
+            <div class="theory-flow__col-header">Теории обучения</div>
+            <div class="theory-flow__node theory-flow__node--primary" id="node-construct">
+              <h3 class="theory-flow__node-title">Конструктивизм</h3>
+              <p class="theory-flow__node-desc">Основа подхода: ученик выстраивает знание через активное взаимодействие со средой</p>
+            </div>
+            <div class="theory-flow__node theory-flow__node--secondary" id="node-behav">
+              <h3 class="theory-flow__node-title">Бихевиоризм</h3>
+              <p class="theory-flow__node-desc">Инструментальная роль: drill-метод, мгновенная обратная связь</p>
+            </div>
           </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Педагогический дизайн</span>
-            <h3 class="theory-card__title">Теория когнитивной нагрузки</h3>
-            <p class="theory-card__desc">Инструмент верификации проектных решений, контроль нагрузки на рабочую память. Определяет ограничения на объем нового материала в каждом модуле.</p>
+
+          <!-- Connector arrows -->
+          <div class="theory-flow__arrows" aria-hidden="true">
+            <svg class="theory-flow__svg" viewBox="0 0 60 400" preserveAspectRatio="none">
+              <line x1="0" y1="60" x2="60" y2="40" stroke="#c45a3c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+              <line x1="0" y1="60" x2="60" y2="110" stroke="#c45a3c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+              <line x1="0" y1="60" x2="60" y2="180" stroke="#c45a3c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+              <line x1="0" y1="60" x2="60" y2="250" stroke="#c45a3c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.3"/>
+              <line x1="0" y1="60" x2="60" y2="320" stroke="#c45a3c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.3"/>
+              <line x1="0" y1="300" x2="60" y2="40" stroke="#3068a8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.2"/>
+              <line x1="0" y1="300" x2="60" y2="110" stroke="#3068a8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.2"/>
+            </svg>
           </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Педагогический дизайн</span>
-            <h3 class="theory-card__title">Теория мультимедийного обучения</h3>
-            <p class="theory-card__desc">Обоснование мультимодального представления материала: сочетание текста, аудио, визуальных элементов и интерактивных упражнений.</p>
+
+          <!-- Column 2: PedDesign theories -->
+          <div class="theory-flow__col theory-flow__col--center">
+            <div class="theory-flow__col-header">Теории педдизайна и мотивации</div>
+            <div class="theory-flow__node theory-flow__node--accent">
+              <h3 class="theory-flow__node-title">Теория когнитивной нагрузки</h3>
+              <p class="theory-flow__node-desc">Контроль нагрузки на рабочую память</p>
+            </div>
+            <div class="theory-flow__node theory-flow__node--accent">
+              <h3 class="theory-flow__node-title">Теория мультимедийного обучения</h3>
+              <p class="theory-flow__node-desc">Мультимодальное представление материала</p>
+            </div>
+            <div class="theory-flow__node theory-flow__node--accent">
+              <h3 class="theory-flow__node-title">Теория двойного кодирования</h3>
+              <p class="theory-flow__node-desc">Вербальный + визуальный каналы памяти</p>
+            </div>
+            <div class="theory-flow__node theory-flow__node--accent">
+              <h3 class="theory-flow__node-title">Теория самодетерминации</h3>
+              <p class="theory-flow__node-desc">Автономия, компетентность, связанность</p>
+            </div>
+            <div class="theory-flow__node theory-flow__node--accent">
+              <h3 class="theory-flow__node-title">Геймификация</h3>
+              <p class="theory-flow__node-desc">Прогресс, уровни, награды, мотивационный дизайн</p>
+            </div>
           </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Педагогический дизайн</span>
-            <h3 class="theory-card__title">Теория двойного кодирования</h3>
-            <p class="theory-card__desc">Одновременная активация вербального и визуального каналов памяти. Каждый иероглиф и фраза подкреплены визуальной ассоциацией.</p>
+
+          <!-- Connector arrows 2 -->
+          <div class="theory-flow__arrows" aria-hidden="true">
+            <svg class="theory-flow__svg" viewBox="0 0 60 400" preserveAspectRatio="none">
+              <line x1="0" y1="200" x2="60" y2="200" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.3"/>
+            </svg>
           </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Мотивация</span>
-            <h3 class="theory-card__title">Теория самодетерминации</h3>
-            <p class="theory-card__desc">Психологическое обоснование геймификации через потребности в автономии, компетентности и связанности.</p>
+
+          <!-- Column 3: Models -->
+          <div class="theory-flow__col theory-flow__col--right">
+            <div class="theory-flow__col-header">Модели педдизайна</div>
+            <div class="theory-flow__node theory-flow__node--muted">
+              <p class="theory-flow__coming-soon">Скоро появится...</p>
+            </div>
           </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Мотивация</span>
-            <h3 class="theory-card__title">Геймификация</h3>
-            <p class="theory-card__desc">Подход мотивационного дизайна: шкала прогресса, уровни, награды, поддерживающие ощущение продвижения и достижений.</p>
-          </div>
-          <div class="theory-card">
-            <span class="theory-card__category">Теория обучения</span>
-            <h3 class="theory-card__title">Бихевиоризм</h3>
-            <p class="theory-card__desc">Используется в инструментальной роли: drill-метод для автоматизации базовых навыков, мгновенная обратная связь (сигналы правильности).</p>
-          </div>
+
         </div>
       </div>
     </section>
