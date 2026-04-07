@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Китайский с 0 - Геймифицированный онлайн-тренажер</title>
+  <meta name="description" content="Геймифицированный онлайн-тренажер для освоения китайского языка с нуля. Уровень HSK1. Магистерская программа Педагогический дизайн, ВШЭ.">
+
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:999;background:var(--color-primary);color:#fff;padding:8px 16px;">Перейти к содержимому</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#1a2744"/>
+          <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-family="serif" font-size="20" font-weight="700">中</text>
+        </svg>
+        <div>
+          <span class="header__logo-text">Китайский с 0</span>
+          <span class="header__logo-sub">Педагогический дизайн</span>
+        </div>
+      </a>
+
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="#concept">О продукте</a>
+        <a href="#competitors">Конкуренты</a>
+        <a href="#research">Исследование</a>
+        <a href="#theory">Теория</a>
+        <a href="#brief">Бриф</a>
+        <a href="#curriculum">Программа</a>
+        <a href="#roadmap">Дорожная карта</a>
+      </nav>
+
+      <button class="header__burger" aria-label="Открыть меню" id="burger-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <button class="mobile-menu__close" aria-label="Закрыть меню" id="menu-close">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="#concept">О продукте</a>
+      <a href="#competitors">Конкуренты</a>
+      <a href="#research">Исследование</a>
+      <a href="#theory">Теория</a>
+      <a href="#brief">Бриф</a>
+      <a href="#curriculum">Программа</a>
+      <a href="#roadmap">Дорожная карта</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span>Магистерская программа / ВШЭ</span>
+          </div>
+          <h1 class="hero__title">Геймифицированный<br>онлайн-тренажер<br><span>«Китайский с 0»</span></h1>
+          <p class="hero__subtitle">Цифровой образовательный продукт для освоения базовых навыков китайского языка с нуля. Онлайн, самостоятельное обучение в индивидуальном темпе с использованием игровых механик и микролернинга.</p>
+          <div class="hero__tags">
+            <span class="hero__tag">HSK 1</span>
+            <span class="hero__tag">Взрослые 20-45 лет</span>
+            <span class="hero__tag">15 модулей</span>
+            <span class="hero__tag">Геймификация</span>
+            <span class="hero__tag">Микролернинг</span>
+          </div>
+        </div>
+        <div class="hero__characters">
+          <div class="hero__character hero__character--ezhenya">
+            <img src="./assets/ezhenya.jpg" alt="Ежэня - персонаж-маскот тренажера" width="220" height="300" loading="eager">
+          </div>
+          <div class="hero__character hero__character--arkadiy">
+            <img src="./assets/arkadiy.jpg" alt="Аркадий - главный герой-криптозоолог" width="160" height="260" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONCEPT ==================== -->
+    <section class="section section--alt" id="concept">
+      <div class="section__inner">
+        <span class="section__label reveal">Концептуальная модель</span>
+        <h2 class="section__title reveal">Легенда и цель тренажера</h2>
+        <div class="concept__grid reveal-stagger">
+          <div class="concept__legend">
+            <h3 class="concept__legend-title">Легенда</h3>
+            <p>Криптозоолог Аркадий работает в лаборатории Терра Инкогнита. Он собирается в экспедицию в поисках Ежэня. Узнав, что Китай ввел безвизовый режим для граждан РФ, Аркадий принял решение незамедлительно отправиться в путь.</p>
+          </div>
+          <div class="concept__goal">
+            <h3 class="concept__goal-title">Цель продукта</h3>
+            <p>Создать цифровой адаптивный тренажер для взрослых, который позволит освоить и применить в реальных ситуациях базовые фразы китайского языка, постепенно увеличивая сложность через механизмы двойного кодирования, персонализированного повторения и симуляции диалогов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMPETITORS ==================== -->
+    <section class="section" id="competitors">
+      <div class="section__inner">
+        <span class="section__label reveal">Анализ рынка</span>
+        <h2 class="section__title reveal">Конкурентная среда</h2>
+
+        <div class="competitors__players reveal">
+          <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-4);">Ключевые игроки</h3>
+          <div class="competitors__player-list">
+            <span class="competitors__player-tag">Duolingo Chinese</span>
+            <span class="competitors__player-tag">HelloChinese</span>
+            <span class="competitors__player-tag">ChineseSkill</span>
+            <span class="competitors__player-tag">Ninchanese</span>
+            <span class="competitors__player-tag">SuperChinese</span>
+          </div>
+        </div>
+
+        <div class="competitors__grid reveal-stagger">
+          <div class="competitor-card">
+            <h3 class="competitor-card__title">Преимущества рынка</h3>
+            <ul class="competitor-card__list">
+              <li>Низкий порог входа</li>
+              <li>Элементы геймификации</li>
+              <li>Короткие сессии</li>
+              <li>Хорошая база для старта и заучивания лексики</li>
+            </ul>
+          </div>
+          <div class="competitor-card competitor-card--highlight">
+            <h3 class="competitor-card__title">Незакрытые зоны (GAPS)</h3>
+            <ul class="competitor-card__list">
+              <li>Слабая подготовка к реальному HSK (материал разрознен)</li>
+              <li>Нет четкой траектории от нуля до результата</li>
+              <li>Отсутствие связи с реальными практическими задачами взрослого ученика</li>
+            </ul>
+          </div>
+          <div class="competitor-card" style="grid-column: 1 / -1;">
+            <h3 class="competitor-card__title">Вывод для продукта</h3>
+            <ul class="competitor-card__list">
+              <li>Выигрышное позиционирование на стыке геймификации и системного академического подхода</li>
+              <li>Микрообучение (10-15 мин), но с жесткой привязкой к стандартам HSK1 и прозрачным прогрессом</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RESEARCH ==================== -->
+    <section class="section section--alt" id="research">
+      <div class="section__inner">
+        <span class="section__label reveal">Исследование</span>
+        <h2 class="section__title reveal">Целевая аудитория</h2>
+        <p class="section__desc reveal">Понять потребности пользователей, их барьеры и конкурентную среду для запуска востребованного MVP продукта.</p>
+
+        <!-- Stats -->
+        <div class="research__stats reveal-stagger">
+          <div class="stat-card">
+            <span class="stat-card__number">35</span>
+            <span class="stat-card__label">Анкет</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">4</span>
+            <span class="stat-card__label">Глубинных интервью</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">JTBD</span>
+            <span class="stat-card__label">Фреймворк</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">22-45</span>
+            <span class="stat-card__label">Возраст ЦА</span>
+          </div>
+        </div>
+
+        <!-- Insights -->
+        <div class="insights__grid reveal-stagger">
+          <div class="insight-card">
+            <span class="insight-card__label">Ядро ЦА</span>
+            <p class="insight-card__text">Занятые взрослые от 22 до 45 лет, совмещающие учебу с работой</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-card__label">Главные барьеры</span>
+            <p class="insight-card__text">Нехватка времени, страх перегруза, быстрая потеря мотивации при отсутствии результатов</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-card__label">Ожидания</span>
+            <p class="insight-card__text">Микрообучение (сессии по 10-15 минут), четкая структура курса, видимый прогресс на каждом шаге</p>
+          </div>
+        </div>
+
+        <!-- Personas -->
+        <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-6);" class="reveal">Портрет ЦА</h3>
+        <div class="personas__grid reveal-stagger">
+          <div class="persona-card">
+            <div class="persona-card__image">
+              <img src="./assets/persona-rational.jpg" alt="Тип 1: Рациональный" width="400" height="280" loading="lazy" decoding="async">
+            </div>
+            <div class="persona-card__body">
+              <h4 class="persona-card__type">Тип 1: Рациональный</h4>
+              <p class="persona-card__desc">Интеллектуал, понимает ценность языка, но нет срочности. Не будет учиться сам.</p>
+              <div class="persona-card__detail"><strong>JTBD:</strong> <span>Спокойное системное обучение</span></div>
+              <div class="persona-card__detail"><strong>Риск:</strong> <span>Потеря интереса без практической цели</span></div>
+              <div class="persona-card__detail"><strong>Решение:</strong> <span>Прозрачная траектория, видимый рост компетенции, формат с наставником</span></div>
+            </div>
+          </div>
+
+          <div class="persona-card">
+            <div class="persona-card__image">
+              <img src="./assets/persona-ambitious.jpg" alt="Тип 2: Амбициозный" width="400" height="280" loading="lazy" decoding="async">
+            </div>
+            <div class="persona-card__body">
+              <h4 class="persona-card__type">Тип 2: Амбициозный</h4>
+              <p class="persona-card__desc">Язык как социальный лифт. Готов платить, любит соревноваться.</p>
+              <div class="persona-card__detail"><strong>JTBD:</strong> <span>Интенсивный формат ради преимущества</span></div>
+              <div class="persona-card__detail"><strong>Риск:</strong> <span>Прокрастинация и потеря ритма</span></div>
+              <div class="persona-card__detail"><strong>Решение:</strong> <span>Механики дедлайнов, внешний контроль, микрошаги, сильная обратная связь</span></div>
+            </div>
+          </div>
+
+          <div class="persona-card">
+            <div class="persona-card__image">
+              <img src="./assets/persona-cautious.jpg" alt="Тип 3: Осторожный" width="400" height="280" loading="lazy" decoding="async">
+            </div>
+            <div class="persona-card__body">
+              <h4 class="persona-card__type">Тип 3: Осторожный</h4>
+              <p class="persona-card__desc">Рационален, боится ошибок. Избегает любой соревновательности.</p>
+              <div class="persona-card__detail"><strong>JTBD:</strong> <span>Безопасное пространство для старта</span></div>
+              <div class="persona-card__detail"><strong>Риск:</strong> <span>Уход после первой же неудачи</span></div>
+              <div class="persona-card__detail"><strong>Решение:</strong> <span>Антифрустрационный дизайн, мягкие механики прогресса, быстрые победы на старте</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STAKEHOLDERS ==================== -->
+    <section class="section" id="stakeholders">
+      <div class="section__inner">
+        <span class="section__label reveal">Стейкхолдеры</span>
+        <h2 class="section__title reveal">Карта стейкхолдеров</h2>
+        <p class="section__desc reveal">Распределение заинтересованных сторон по уровню влияния и поддержки проекта.</p>
+        <div class="stakeholders__content reveal-stagger">
+          <div class="stakeholder-quadrant stakeholder-quadrant--champions">
+            <h3 class="stakeholder-quadrant__title">Чемпионы (высокое влияние + поддержка)</h3>
+            <ul class="stakeholder-quadrant__list">
+              <li>ШИЯ ВШЭ</li>
+              <li>ФМЭиМП ВШЭ</li>
+              <li>Департамент иностранных языков</li>
+              <li>Школа востоковедения</li>
+            </ul>
+          </div>
+          <div class="stakeholder-quadrant stakeholder-quadrant--critics">
+            <h3 class="stakeholder-quadrant__title">Критики (высокое влияние, низкая поддержка)</h3>
+            <ul class="stakeholder-quadrant__list">
+              <li>ЦФИ НИУ ВШЭ</li>
+              <li>Академическое сообщество</li>
+            </ul>
+          </div>
+          <div class="stakeholder-quadrant stakeholder-quadrant--supporters">
+            <h3 class="stakeholder-quadrant__title">Сторонники (высокая поддержка)</h3>
+            <ul class="stakeholder-quadrant__list">
+              <li>Студенты</li>
+              <li>Преподаватели китайского языка</li>
+              <li>Центр подготовки ФГН</li>
+              <li>ИКВИА</li>
+              <li>Слушатели ДПО</li>
+              <li>ИДПО (СПб)</li>
+            </ul>
+          </div>
+          <div class="stakeholder-quadrant stakeholder-quadrant--passive">
+            <h3 class="stakeholder-quadrant__title">Пассивные</h3>
+            <ul class="stakeholder-quadrant__list">
+              <li>Частные школы</li>
+              <li>Репетиторы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THEORY ==================== -->
+    <section class="section section--alt" id="theory">
+      <div class="section__inner">
+        <span class="section__label reveal">Теоретическое обоснование</span>
+        <h2 class="section__title reveal">Научная база продукта</h2>
+        <p class="section__desc reveal">Проектные решения опираются на теории обучения и модели педагогического дизайна.</p>
+
+        <div class="theory__grid reveal-stagger">
+          <div class="theory-card">
+            <span class="theory-card__category">Теория обучения</span>
+            <h3 class="theory-card__title">Конструктивизм</h3>
+            <p class="theory-card__desc">Основа подхода: ученик выстраивает знание через активное взаимодействие со средой, контекстное погружение и решение реальных коммуникативных задач.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Педагогический дизайн</span>
+            <h3 class="theory-card__title">Теория когнитивной нагрузки</h3>
+            <p class="theory-card__desc">Инструмент верификации проектных решений, контроль нагрузки на рабочую память. Определяет ограничения на объем нового материала в каждом модуле.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Педагогический дизайн</span>
+            <h3 class="theory-card__title">Теория мультимедийного обучения</h3>
+            <p class="theory-card__desc">Обоснование мультимодального представления материала: сочетание текста, аудио, визуальных элементов и интерактивных упражнений.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Педагогический дизайн</span>
+            <h3 class="theory-card__title">Теория двойного кодирования</h3>
+            <p class="theory-card__desc">Одновременная активация вербального и визуального каналов памяти. Каждый иероглиф и фраза подкреплены визуальной ассоциацией.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Мотивация</span>
+            <h3 class="theory-card__title">Теория самодетерминации</h3>
+            <p class="theory-card__desc">Психологическое обоснование геймификации через потребности в автономии, компетентности и связанности.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Мотивация</span>
+            <h3 class="theory-card__title">Геймификация</h3>
+            <p class="theory-card__desc">Подход мотивационного дизайна: шкала прогресса, уровни, награды, поддерживающие ощущение продвижения и достижений.</p>
+          </div>
+          <div class="theory-card">
+            <span class="theory-card__category">Теория обучения</span>
+            <h3 class="theory-card__title">Бихевиоризм</h3>
+            <p class="theory-card__desc">Используется в инструментальной роли: drill-метод для автоматизации базовых навыков, мгновенная обратная связь (сигналы правильности).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRIEF ==================== -->
+    <section class="section" id="brief">
+      <div class="section__inner">
+        <span class="section__label reveal">Бриф</span>
+        <h2 class="section__title reveal">Структура первой локации</h2>
+        <p class="section__desc reveal">Подробная структура входного экрана и первой локации тренажера с описанием шагов, типов контента и обратной связи.</p>
+
+        <div class="brief__table-wrap reveal">
+          <table class="brief__table">
+            <thead>
+              <tr>
+                <th>Блок</th>
+                <th>Шаг</th>
+                <th>Название</th>
+                <th>Тип контента</th>
+                <th>Что делает ученик</th>
+                <th>Обратная связь</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ВХОД</td>
+                <td>Экран 1</td>
+                <td>Стартовая страница</td>
+                <td>Заставка + авторизация</td>
+                <td>Ввод имени для рейтинга; нажатие «Начать путешествие»</td>
+                <td>Анимация: Аркадий получает билет в Китай</td>
+              </tr>
+              <tr>
+                <td>ВХОД</td>
+                <td>Экран 2</td>
+                <td>Главная страница - карта городов</td>
+                <td>Навигация</td>
+                <td>Выбор локации (первая открыта, остальные закрыты)</td>
+                <td>Плашка «Аркадий ждет на границе», подсвечена локация 1</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1</td>
+                <td>Комикс-вход</td>
+                <td>Сюжетная заставка</td>
+                <td>Только сюжет</td>
+                <td>Просмотр комикса: пограничник задает вопрос разными тонами</td>
+                <td>Мотивационная реплика Аркадия о важности тонов</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 1</td>
+                <td>Шаг 1.1</td>
+                <td>Система пиньинь и структура слога</td>
+                <td>Только теория</td>
+                <td>Карточки: схема слога, таблица инициалей, таблица финалей; нажать - услышать</td>
+                <td>Карточка отмечается «прочитано», прогресс-бар заполняется</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 1</td>
+                <td>Шаг 1.2</td>
+                <td>Соотнесение слогов и аудио</td>
+                <td>Задание</td>
+                <td>Соединить 6 слогов с их аудиозаписями</td>
+                <td>Зеленый / красный цвет + повтор правильного аудио</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 2</td>
+                <td>Шаг 2.1</td>
+                <td>Четыре тона - ввод теории</td>
+                <td>Теория + заметка</td>
+                <td>Карточка с графиком тонов, аудиопримеры; лингвокультурная заметка</td>
+                <td>Карточка отмечается «прочитано»</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 2</td>
+                <td>Шаг 2.2</td>
+                <td>Различение тонов на слух</td>
+                <td>Задание</td>
+                <td>Услышать слог - выбрать тон (графика + цифра); 8 слогов, нарастающая сложность</td>
+                <td>Мини-анимация правильного графика тона после каждого ответа</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 2</td>
+                <td>Шаг 2.3</td>
+                <td>Выбор правильного произношения</td>
+                <td>Задание</td>
+                <td>Увидеть слог с тоновым знаком - выбрать верную аудиозапись из трех</td>
+                <td>Указание, в чем ошибка: тон, инициаль или финаль</td>
+              </tr>
+              <tr>
+                <td>ЛОКАЦИЯ 1 / Ход 3</td>
+                <td>Шаг 3.1</td>
+                <td>Числительные 1-10 в сюжете</td>
+                <td>Сюжет + задание</td>
+                <td>Аркадий ищет номер очереди: прослушать объявление, выбрать число из трех</td>
+                <td>Мгновенное подтверждение / разбор ошибки с контекстом ситуации</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CURRICULUM ==================== -->
+    <section class="section section--alt" id="curriculum">
+      <div class="section__inner">
+        <span class="section__label reveal">Учебная программа</span>
+        <h2 class="section__title reveal">15 учебно-игровых модулей</h2>
+        <p class="section__desc reveal">Каждый модуль привязан к городу Китая и отражает логику постепенного освоения языка по таксономии Блума.</p>
+
+        <div class="curriculum__grid reveal-stagger">
+          <div class="module-card">
+            <span class="module-card__number">01</span>
+            <h4 class="module-card__city">Граница, фонетика</h4>
+            <p class="module-card__topic">Система пиньинь, инициали, финали, четыре тона, числительные 1-10</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">02</span>
+            <h4 class="module-card__city">Иероглифика, Суйфэньхэ</h4>
+            <p class="module-card__topic">Базовые черты, порядок черт, простые иероглифы и числительные</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">03</span>
+            <h4 class="module-card__city">Знакомство и семья, Чанчунь</h4>
+            <p class="module-card__topic">Лексика семьи, возраста, внешности; фразы знакомства</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">04</span>
+            <h4 class="module-card__city">Жилье и город, Шэньян</h4>
+            <p class="module-card__topic">Лексика помещений, мебели, предлогов места</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">05</span>
+            <h4 class="module-card__city">Учеба и работа, Пекин</h4>
+            <p class="module-card__topic">Лексика профессий, мест, действий; описание маршрута</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">06</span>
+            <h4 class="module-card__city">Время и расписание, Сиань</h4>
+            <p class="module-card__topic">Лексика времени, дат, дней недели; выражения времени</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">07</span>
+            <h4 class="module-card__city">Распорядок дня, Урумчи</h4>
+            <p class="module-card__topic">Последовательность повседневных действий в диалоге</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">08</span>
+            <h4 class="module-card__city">Транспорт и сравнение, Чэнду</h4>
+            <p class="module-card__topic">Виды транспорта, способы передвижения, конструкции сравнения</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">09</span>
+            <h4 class="module-card__city">Покупки, Шанхай</h4>
+            <p class="module-card__topic">Лексика товаров, денег, числительных; диалог покупки</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">10</span>
+            <h4 class="module-card__city">Кафе и оплата, Сучжоу/Ханчжоу</h4>
+            <p class="module-card__topic">Лексика еды, напитков, реплики официанта; заказ и оплата</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">11</span>
+            <h4 class="module-card__city">Ориентирование, Чунцин</h4>
+            <p class="module-card__topic">Направления, стороны света; инструкции движения</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">12</span>
+            <h4 class="module-card__city">Хобби, Гуанчжоу</h4>
+            <p class="module-card__topic">Лексика хобби и интересов; речь о досуге</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">13</span>
+            <h4 class="module-card__city">Погода, Гонконг</h4>
+            <p class="module-card__topic">Лексика погоды и сезонов; прогноз погоды</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">14</span>
+            <h4 class="module-card__city">Природа и путь, Хайнань</h4>
+            <p class="module-card__topic">Лексика природы и транспорта; ориентация на местности</p>
+          </div>
+          <div class="module-card">
+            <span class="module-card__number">15</span>
+            <h4 class="module-card__city">Здоровье и привычки, Куньмин</h4>
+            <p class="module-card__topic">Лексика здоровья и привычек; советы и рекомендации</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ROADMAP ==================== -->
+    <section class="section" id="roadmap">
+      <div class="section__inner">
+        <span class="section__label reveal">План реализации</span>
+        <h2 class="section__title reveal">Дорожная карта</h2>
+        <p class="section__desc reveal">Два этапа работ: от анализа и проектирования до запуска MVP и масштабирования.</p>
+
+        <div class="roadmap__image-wrap reveal">
+          <img src="./assets/roadmap-1.png" alt="Дорожная карта проекта: Гантт-диаграмма с двумя этапами работ и запуском MVP" width="2000" height="800" loading="lazy" decoding="async">
+        </div>
+
+        <div class="roadmap__phases reveal-stagger">
+          <div class="phase-card">
+            <span class="phase-card__label">Этап 1</span>
+            <h3 class="phase-card__title">Анализ и проектирование</h3>
+            <p class="phase-card__desc">Исследование ЦА, формирование брифа, UX-прототипы, анализ технических ограничений, разработка сценариев обучения.</p>
+          </div>
+          <div class="phase-card">
+            <span class="phase-card__label">Этап 2</span>
+            <h3 class="phase-card__title">Разработка и тестирование</h3>
+            <p class="phase-card__desc">Программная реализация упражнений, дизайн интерфейса, интеграция в LMS ВШЭ, альфа- и бета-версии.</p>
+          </div>
+          <div class="phase-card">
+            <span class="phase-card__label">Запуск MVP</span>
+            <h3 class="phase-card__title">Метрики успеха</h3>
+            <p class="phase-card__desc">Completion >70%, Retention 7-day >40%. Пользователь может пройти модуль от начала до конца без критических багов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <h2 class="footer__title">Авторы проекта</h2>
+        <p class="footer__text">
+          <strong>Хуснутдинова Наиля Ильдусовна</strong><br>
+          Магистерская программа «Педагогический дизайн»<br>
+          Теория и практика обучения
+        </p>
+      </div>
+      <div>
+        <h2 class="footer__title">Научное руководство</h2>
+        <p class="footer__text">
+          <strong>Александрова Людмила Дмитриевна</strong><br>
+          Руководитель проекта<br>
+          Операционное управление дополнительного профессионального образования
+        </p>
+      </div>
+      <div class="footer__bottom">
+        Магистерская программа «Педагогический дизайн» / НИУ ВШЭ / 2026
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
